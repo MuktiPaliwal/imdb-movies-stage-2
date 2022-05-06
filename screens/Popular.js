@@ -23,15 +23,7 @@ export default class PopularMoviesScreen extends Component {
   }
 
   getData = () => {
-    const url = "http://localhost:5000/popular-movies";
-    axios
-      .get(url)
-      .then(async response => {
-        this.setState({ data: response.data.data });
-      })
-      .catch(error => {
-        console.log(error.message);
-      });
+    // write the code to get the data
   };
 
   keyExtractor = (item, index) => index.toString();
@@ -57,11 +49,7 @@ export default class PopularMoviesScreen extends Component {
     const { data } = this.state;
     return (
       <View style={styles.container}>
-        <FlatList
-          data={data}
-          keyExtractor={this.keyExtractor}
-          renderItem={this.renderItems}
-        />
+        //Flatlist code here
       </View>
     );
   }
